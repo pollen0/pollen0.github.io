@@ -1,5 +1,5 @@
-site_name: Paul Lin — Learning Notes
-site_description: Weekly deep-dives on the road to a frontier AI lab.
+site_name: Paul Lin
+site_description: Training notes and weekly thoughts.
 site_author: Paul Lin
 site_url: https://pollen0.github.io/
 repo_url: https://github.com/pollen0/pollen0.github.io
@@ -17,17 +17,20 @@ theme:
     - content.code.copy
   palette:
     - scheme: default
-      primary: indigo
+      primary: white
       accent: indigo
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
     - scheme: slate
-      primary: indigo
+      primary: black
       accent: indigo
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
+  font:
+    text: Inter
+    code: "JetBrains Mono"
 
 markdown_extensions:
   - admonition
@@ -42,6 +45,9 @@ markdown_extensions:
   - toc:
       permalink: true
 
+extra_css:
+  - stylesheets/extra.css
+
 extra_javascript:
   - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
@@ -49,7 +55,10 @@ extra_javascript:
 
 nav:
   - Home: index.md
-  - Weeks:
+  - Training:
+    - All training notes: training.md
     - Week 01 — Autograd & PyTorch: weeks/week-01.md
-  - Progress: progress.md
+  - Thoughts:
+    - All thoughts: thoughts.md
+    - Week 01: thoughts/week-01.md
   - About: about.md

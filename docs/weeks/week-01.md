@@ -1,6 +1,6 @@
 # Week 1: Autograd & PyTorch from Zero
 
-*Week 1 of 14 in the "Break into a frontier AI lab" pipeline. Written in the style of Berkeley lecture notes: definitions, worked derivations, intuition checks, exercises.*
+*Training notes, week 1. Lecture-style write-ups: definitions, worked derivations, intuition checks, exercises.*
 
 ## How to use these notes
 
@@ -14,7 +14,7 @@
 
 ## Lecture 1 — The calculus underneath
 
-*Day 1. Everything this week — and a disturbing fraction of frontier-lab interviews — is the chain rule, applied mechanically. Rebuild it until it's reflex.*
+*Day 1. Everything this week — and a disturbing fraction of ML interviews — is the chain rule, applied mechanically. Rebuild it until it's reflex.*
 
 ### 1.1 The derivative, in one paragraph
 
