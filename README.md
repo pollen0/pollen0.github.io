@@ -1,5 +1,7 @@
 # pollen0.github.io
 
+Live site: https://pollen0.github.io
+
 Public learning notes — weekly deep-dives on the road to a frontier AI lab.
 
 Built with [MkDocs Material](https://squidfunk.github.io/mkdocs-material/). Deploys automatically to https://pollen0.github.io via GitHub Actions on every push to `main`.
