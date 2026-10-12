@@ -1,54 +1,343 @@
-/* Clean, Notion/Stripe-inspired reading experience */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap');
 
+/* ─────────────────────────────────────────────────────────────
+   Heytea-inspired theme: warm rice paper, soft ink, tea-leaf green.
+   Principles: minimalism, balance, natural neutrals, calm whitespace.
+   ───────────────────────────────────────────────────────────── */
+
+:root {
+  --paper:        #faf7ef;  /* warm rice paper */
+  --paper-deep:   #f2ecdd;  /* deeper cream for header/footer */
+  --card:         #fffdf7;  /* card surface */
+  --ink:          #33302a;  /* warm soft-black, never pure black */
+  --ink-soft:     #6f6455;  /* warm taupe */
+  --ink-faint:    #9c907d;  /* faint warm gray */
+  --hairline:     #e7dcc4;  /* dividers */
+  --tea:          #5c7050;  /* tea-leaf green */
+  --tea-deep:     #42563b;  /* deep green for links/active */
+  --tea-mist:     #ecefe2;  /* green-tinted wash */
+  --cinnabar:     #b0512c;  /* seal-red accent, used sparingly */
+  --cinnabar-mist:#f6e8db;
+  --code-bg:      #f3edde;
+}
+
+:root, [data-md-color-scheme="default"] {
+  --md-default-bg-color:               var(--paper);
+  --md-default-bg-color--light:        var(--card);
+  --md-default-bg-color--lighter:      var(--paper-deep);
+  --md-default-fg-color:               var(--ink);
+  --md-default-fg-color--light:        var(--ink-soft);
+  --md-default-fg-color--lighter:      var(--ink-faint);
+  --md-default-fg-color--lightest:     var(--hairline);
+
+  --md-primary-fg-color:               var(--paper);
+  --md-primary-fg-color--light:        var(--card);
+  --md-primary-fg-color--dark:         var(--paper-deep);
+  --md-primary-bg-color:               var(--ink);
+
+  --md-accent-fg-color:                var(--tea);
+  --md-accent-bg-color:                var(--paper);
+
+  --md-code-bg-color:                  var(--code-bg);
+  --md-code-fg-color:                  var(--ink);
+  --md-typeset-a-color:                var(--tea-deep);
+
+  --md-admonition-bg-color:            var(--card);
+  --md-shadow-z1: 0 2px 10px rgba(90, 74, 50, .06);
+  --md-shadow-z2: 0 4px 24px rgba(90, 74, 50, .10);
+}
+
+/* soft selection, like a brush stroke */
+::selection {
+  background: #e9dcbd;
+  color: var(--ink);
+}
+
+/* ── layout ── */
 .md-grid {
-  max-width: 76rem;
+  max-width: 72rem;
+}
+
+.md-main__inner {
+  margin-top: 1.25rem;
+}
+
+/* ── header: cream with a hairline rule, tea label line ── */
+.md-header {
+  background: var(--paper);
+  color: var(--ink);
+  box-shadow: none;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.md-header__title,
+.md-header__topic,
+.md-header__button,
+.md-header__source,
+.md-search__input,
+.md-search__input::placeholder {
+  color: var(--ink);
+}
+
+.md-header__button:hover {
+  opacity: .65;
+}
+
+.md-tabs {
+  background: var(--paper);
+  border-bottom: 1px solid var(--hairline);
+  color: var(--ink-soft);
+}
+
+.md-tabs__link {
+  color: var(--ink-soft);
+  opacity: 1;
+  font-weight: 500;
+}
+
+.md-tabs__item--active .md-tabs__link,
+.md-tabs__link:hover {
+  color: var(--tea-deep);
+  opacity: 1;
+}
+
+.md-tabs__item--active .md-tabs__link {
+  box-shadow: inset 0 -2px 0 var(--tea);
+}
+
+/* search pill */
+.md-search__form {
+  background: var(--card);
+  border: 1px solid var(--hairline);
+  border-radius: 999px;
+}
+
+.md-search__form:hover {
+  border-color: var(--tea);
+}
+
+/* ── typography ── */
+.md-typeset {
+  font-size: .95rem;
+  line-height: 1.75;
+  color: var(--ink);
 }
 
 .md-typeset h1 {
-  font-weight: 750;
-  letter-spacing: -0.025em;
+  font-family: "Fraunces", Georgia, "Times New Roman", serif;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  margin-bottom: .75rem;
 }
 
 .md-typeset h2 {
-  font-weight: 700;
-  letter-spacing: -0.015em;
+  font-family: "Fraunces", Georgia, "Times New Roman", serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  padding-bottom: .4rem;
+  border-bottom: 1px solid var(--hairline);
 }
 
-/* hairline header, Notion-style */
-.md-header {
-  box-shadow: 0 1px 0 var(--md-default-fg-color--lightest);
+.md-typeset h3, .md-typeset h4 {
+  font-weight: 650;
+  letter-spacing: -0.01em;
 }
 
-/* track cards on the home page */
+.md-typeset a {
+  color: var(--tea-deep);
+  text-decoration: underline;
+  text-decoration-color: rgba(92, 112, 80, .35);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+.md-typeset a:hover {
+  color: var(--tea-deep);
+  text-decoration-color: var(--tea-deep);
+}
+
+/* kicker above the hero title — small-caps label, Heytea menu style */
+.kicker {
+  font-size: .7rem;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--tea-deep);
+  font-weight: 600;
+  margin-bottom: .15rem;
+}
+
+/* ── track cards on the home page ── */
 .tracks {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
-  gap: 1rem;
-  margin: 1.75rem 0;
+  gap: 1.1rem;
+  margin: 2rem 0;
 }
 
 a.track-card {
   display: block;
-  padding: 1.25rem 1.5rem;
-  border: 1px solid var(--md-default-fg-color--lightest);
-  border-radius: 0.6rem;
+  padding: 1.4rem 1.5rem 1.35rem;
+  background: var(--card);
+  border: 1px solid var(--hairline);
+  border-radius: 1rem;
   text-decoration: none;
-  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
 }
 
 a.track-card:hover {
-  border-color: var(--md-accent-fg-color);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  transform: translateY(-2px);
+  border-color: var(--tea);
+  box-shadow: var(--md-shadow-z2);
+  text-decoration: none;
+}
+
+.track-card em {
+  display: block;
+  font-style: normal;
+  font-size: .68rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--tea-deep);
+  font-weight: 600;
+  margin-bottom: .45rem;
 }
 
 .track-card strong {
   display: block;
-  font-size: 1.05rem;
-  margin-bottom: 0.25rem;
-  color: var(--md-default-fg-color);
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-bottom: .3rem;
+  color: var(--ink);
 }
 
 .track-card span {
-  font-size: 0.9rem;
-  color: var(--md-default-fg-color--light);
+  font-size: .88rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+/* ── navigation ── */
+.md-nav__link {
+  color: var(--ink-soft);
+}
+
+.md-nav__link:hover {
+  color: var(--tea-deep);
+}
+
+.md-nav__item .md-nav__link--active,
+.md-nav__item .md-nav__link--active:hover {
+  color: var(--tea-deep);
+  font-weight: 600;
+}
+
+/* toc marker */
+.md-nav--secondary .md-nav__link--active {
+  border-left: 2px solid var(--tea);
+}
+
+/* ── code ── */
+.md-typeset code {
+  background: var(--code-bg);
+  border-radius: .35rem;
+  padding: .1em .35em;
+  color: var(--tea-deep);
+  font-size: .84em;
+}
+
+.md-typeset .highlight {
+  border: 1px solid var(--hairline);
+  border-radius: .8rem;
+  background: var(--code-bg);
+  overflow: hidden;
+}
+
+.md-typeset .highlight code {
+  background: transparent;
+  color: var(--ink);
+}
+
+.md-typeset pre > code {
+  border-radius: 0;
+}
+
+/* ── tables: soft, tea-tinted header ── */
+.md-typeset table:not([class]) {
+  border: 1px solid var(--hairline);
+  border-radius: .8rem;
+  overflow: hidden;
+  font-size: .88rem;
+}
+
+.md-typeset table:not([class]) th {
+  background: var(--tea-mist);
+  color: var(--tea-deep);
+  font-weight: 650;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.md-typeset table:not([class]) td {
+  border-top: 1px solid var(--hairline);
+}
+
+.md-typeset table:not([class]) tr:hover td {
+  background: var(--paper-deep);
+}
+
+/* ── admonitions: rounded, hairline-framed ── */
+.md-typeset .admonition {
+  border: none;
+  border-radius: .8rem;
+  box-shadow: inset 0 0 0 1px var(--hairline);
+  font-size: .9rem;
+}
+
+.md-typeset .admonition.note {
+  background: var(--tea-mist);
+}
+
+.md-typeset .admonition.warning {
+  background: var(--cinnabar-mist);
+}
+
+/* ── images and figures ── */
+.md-typeset img {
+  border-radius: .8rem;
+  border: 1px solid var(--hairline);
+}
+
+/* ── footer ── */
+.md-footer {
+  background: var(--paper-deep);
+  color: var(--ink-soft);
+  border-top: 1px solid var(--hairline);
+}
+
+.md-footer-meta {
+  background: transparent;
+}
+
+.md-footer__link,
+.md-footer-meta__inner,
+.md-copyright {
+  color: var(--ink-soft);
+}
+
+/* back-to-top button */
+.md-top {
+  background: var(--card);
+  color: var(--tea-deep);
+  border: 1px solid var(--hairline);
+  box-shadow: var(--md-shadow-z1);
+  border-radius: 999px;
+}
+
+/* skip link */
+.md-skip {
+  background: var(--tea-deep);
+  color: var(--paper);
 }

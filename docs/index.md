@@ -1,15 +1,19 @@
+<p class="kicker">A study journal</p>
+
 # Paul Lin
 
 Training notes and weekly thoughts.
 
 <div class="tracks">
   <a class="track-card" href="training/">
+    <em>Deep dives</em>
     <strong>Training notes</strong>
-    <span>Deep, lecture-style write-ups — derivations, code, exercises.</span>
+    <span>Lecture-style write-ups — derivations, code, exercises.</span>
   </a>
   <a class="track-card" href="thoughts/">
+    <em>Short notes</em>
     <strong>Thoughts</strong>
-    <span>Shorter weekly notes on whatever I'm chewing on.</span>
+    <span>Weekly notes on whatever I'm chewing on.</span>
   </a>
 </div>
 
