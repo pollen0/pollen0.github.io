@@ -51,6 +51,8 @@ nav:
   - Compute:
     - State of Compute: compute/index.md
     - Ornn: compute/ornn.md
+    - SF Compute: compute/sf-compute.md
+    - Itô: compute/ito.md
     - Silicon Data: compute/silicon-data.md
     - Why the benchmark: compute/why-the-benchmark.md
     - Why this market exists: compute/why-this-market-exists.md
