@@ -26,6 +26,18 @@ Still to explore:
 - How do provisioning, scheduling, networking, and storage work between paying and running a job?
 - How does that differ for spot vs. reserved vs. futures-settled / physically-settled capacity?
 
+## Side thought: compute as a financial stack — track marginal output per GPU-hour
+
+Side thought (Oct 13, 2026): Compute is valuable as it is stored. The output of electricity / oil is only as valuable as the outputs that can be created with it — same for compute.
+
+Think of compute as a financial stack: as a buyer, can you track the marginal output per GPU-hour, and easily compare whether you can downgrade along the stack?
+
+Still to explore:
+
+- What counts as marginal output per GPU-hour — tokens, training progress, completed jobs?
+- What does downgrading along the stack mean in practice — cheaper GPU, smaller model, lower precision — and when does it preserve output per dollar?
+- If buyers could see marginal output clearly, would price be set by output rather than by GPU-hour?
+
 ---
 
 *Related: [Why the benchmark](why-the-benchmark.md) — Gupta / Mizuho on the benchmark as the real innovation · [Back to overview](index.md)*
