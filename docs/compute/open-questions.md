@@ -16,6 +16,16 @@ Still to explore:
 - What would prove this right: benchmarks fragmenting by region / power market / latency, with most hedging done locally or bilaterally.
 - Whether physical settlement and bilateral contracts bypass the need for a broad benchmark entirely.
 
+## When a buyer buys compute on these platforms, how do they actually turn it into usable compute?
+
+Question to answer (Oct 13, 2026): When buyers buy compute on these platforms — compute marketplaces / sandbox companies — what is the process of turning that purchase into compute they can actually use?
+
+Still to explore:
+
+- What does the buyer actually get — an API key, SSH access, a container, a cluster?
+- How do provisioning, scheduling, networking, and storage work between paying and running a job?
+- How does that differ for spot vs. reserved vs. futures-settled / physically-settled capacity?
+
 ---
 
 *Related: [Why the benchmark](why-the-benchmark.md) — Gupta / Mizuho on the benchmark as the real innovation · [Back to overview](index.md)*
