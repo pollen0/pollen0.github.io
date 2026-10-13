@@ -15,6 +15,11 @@ Training notes and weekly thoughts.
     <strong>Thoughts</strong>
     <span>Weekly notes on whatever I'm chewing on.</span>
   </a>
+  <a class="track-card" href="compute/">
+    <em>Market notes</em>
+    <strong>Compute</strong>
+    <span>Working notes on compute as a commodity — players, benchmarks, and why the market exists.</span>
+  </a>
 </div>
 
 ## Latest

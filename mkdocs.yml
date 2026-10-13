@@ -48,6 +48,12 @@ nav:
   - Training:
     - All training notes: training.md
     - Week 01 — Autograd & PyTorch: weeks/week-01.md
+  - Compute:
+    - State of Compute: compute/index.md
+    - Ornn: compute/ornn.md
+    - Silicon Data: compute/silicon-data.md
+    - Why the benchmark: compute/why-the-benchmark.md
+    - Why this market exists: compute/why-this-market-exists.md
   - Thoughts:
     - All thoughts: thoughts.md
     - Week 01: thoughts/week-01.md
