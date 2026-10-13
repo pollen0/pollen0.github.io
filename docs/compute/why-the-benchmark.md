@@ -16,4 +16,4 @@ That points to an increasingly fragmented market, where each competitor only tra
 
 ---
 
-*Related: [Why this market exists](why-this-market-exists.md) — who needs these hedges · [Back to overview](index.md)*
+*Related: [Open questions](open-questions.md) — hypothesis: the benchmark may only matter regionally · [Why this market exists](why-this-market-exists.md) — who needs these hedges · [Back to overview](index.md)*

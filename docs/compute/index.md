@@ -14,3 +14,4 @@ These are my working notes on the space, broken into pieces that link to each ot
 - [Silicon Data](silicon-data.md) — the closest rival benchmark
 - [Why the benchmark](why-the-benchmark.md) — why the index, not the contract, is the real innovation
 - [Why this market exists](why-this-market-exists.md) — who needs to hedge, and what's still blocking it
+- [Open questions](open-questions.md) — hypotheses I'm still working through
